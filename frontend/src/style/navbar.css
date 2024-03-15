@@ -1,0 +1,38 @@
+.navbar-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex; /* Utilizar flexbox para alinhar itens horizontalmente */
+    justify-content: center; /* Centralizar itens horizontalmente */
+}
+
+.navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Utilizar flexbox para alinhar itens horizontalmente */
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px; /* Adicionar espaçamento interno ao link */
+    border-radius: 4px; /* Adicionar bordas arredondadas */
+}
+
+.nav-item a:hover {
+    background-color: #555; /* Mudar cor de fundo ao passar o mouse */
+}
+
+.active {
+    font-weight: bold;
+}

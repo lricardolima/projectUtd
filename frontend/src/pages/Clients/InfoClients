@@ -1,0 +1,27 @@
+function InfoClient(){
+const {id} = useParams();
+const [Client,setClient] = useState({
+id:'',
+name:'',
+age:'',
+email:''
+});
+useEffect(()=>{
+buscaClient(id);
+},[]);
+const buscaClient = async(id)=>{
+const ClientDados = await (await getClient(id)).data;
+console.log(ClientDados);
+setClient(ClientDados);
+}
+return(
+<>
+<h6>Dados cadastrais</h6>
+<p>código: {Client.id}</p>
+<p>Nome: {Client.name}</p>
+<p>Idade: {Client.age}</p>
+<p>Email: {Client.email}</p>
+</>
+);
+}
+export default InfoClient
