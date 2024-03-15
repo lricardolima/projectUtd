@@ -1,6 +1,6 @@
 node_modules
 app/config/env.js
-
+package-lock.json
 
 # Editor directories and files
 .vscode/*
