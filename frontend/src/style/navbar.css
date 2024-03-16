@@ -6,16 +6,18 @@
 
 .navbar {
     background-color: #333;
-    padding: 10px;
-    display: flex; /* Utilizar flexbox para alinhar itens horizontalmente */
-    justify-content: center; /* Centralizar itens horizontalmente */
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
 }
 
 .navbar-nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Utilizar flexbox para alinhar itens horizontalmente */
+    display: flex;
 }
 
 .nav-item {
@@ -25,12 +27,12 @@
 .nav-item a {
     color: #fff;
     text-decoration: none;
-    padding: 8px 12px; /* Adicionar espaçamento interno ao link */
-    border-radius: 4px; /* Adicionar bordas arredondadas */
+    padding: 20px;
+    border-radius: 50px;
 }
 
 .nav-item a:hover {
-    background-color: #555; /* Mudar cor de fundo ao passar o mouse */
+    background-color: #555;
 }
 
 .active {

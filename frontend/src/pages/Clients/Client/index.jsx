@@ -4,7 +4,7 @@ import Navbar from '../../Navbar/index.jsx';
 function Client() {
     return (
         <>
-            <Navbar /> {/* Adicione a barra de navegação aqui */}
+            <Navbar />
 
             <Outlet />
         </>

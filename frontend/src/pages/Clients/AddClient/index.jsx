@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { addClient } from '../../../services/client-requests.jsx';
+import { FaArrowLeft, FaUserPlus } from 'react-icons/fa';
 import '../../../style/style.css'
 import '../../../style/form.css'
 
@@ -25,7 +26,7 @@ function AddClient() {
     const saveClient = async (event) => {
         event.preventDefault();
         await addClient(client);
-        navigate('/client/view');
+        navigate('/');
     };
 
     return (
@@ -66,7 +67,14 @@ function AddClient() {
                     />
                 </div>
                 <div className="form-group">
-                    <button className="submit" type="submit">Cadastrar</button>
+                    <button className="submit" type="submit">
+                        <FaUserPlus /> Cadastrar
+                    </button>
+                </div>
+                <div className="form-group">
+                    <button className="action-button" onClick={() => navigate('/')}>
+                        <FaArrowLeft/> Cancelar
+                    </button>
                 </div>
             </form>
         </div>

@@ -11,6 +11,7 @@
 }
 
 .form-group label {
+    font-size: large;
     display: block;
     margin-left: 10px;
     font-weight: bold;
@@ -18,52 +19,50 @@
 }
 
 .form-group input[type="text"],
-.form-group input[type="email"],
-.form-group button
+.form-group input[type="email"]
 {
     width: 100%;
-    padding: 8px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 50px;
 }
 
-.cancel-button {
-     padding: 10px 20px;
-     background-color: #dc3545;
-     color: #fff;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
- }
+.form-container {
+    position: relative;
+}
 
-.cancel-button:hover {
-    background-color: #c82333;
+.action-button {
+    float: right;
+}
+
+.form-group .action-button {
+    padding: 20px 20px;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.form-group .action-button:hover {
+    background-color: #e21111;
+}
+
+.submit {
+    float: left;
 }
 
 .form-group .submit {
-    display: inline-block;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    margin-left: 5px;
     border-radius: 50px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
-.form-group button:hover {
+.form-group .submit:hover {
     background-color: #0056b3;
-}
-
-.cancel-button {
-    padding: 10px 20px;
-    background-color: #dc3545; /* Cor de fundo vermelha */
-    color: #fff; /* Cor do texto branca */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.cancel-button:hover {
-    background-color: #c82333; /* Cor de fundo vermelha mais escura quando passar o mouse */
 }

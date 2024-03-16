@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import Home from './pages/Clients/Home';
 import Client from './pages/Clients/Client';
 import AddClient from './pages/Clients/AddClient';
 import EditClient from './pages/Clients/EditClient';
@@ -14,7 +14,7 @@ function App() {
                 <Route path='client' element={<Client />}>
                     <Route index element={<AddClient />} />
                     <Route path='edit/:id' element={<EditClient />} />
-                    <Route path='view' element={<ViewClient />} />
+                    <Route path='view/:id' element={<ViewClient />} />
                 </Route>
                 <Route path='*' element={<NoMatch />} />
             </Routes>

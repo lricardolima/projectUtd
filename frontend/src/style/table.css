@@ -1,29 +1,47 @@
-table {
+.client-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
-th, td {
+.client-table th, .client-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
     text-align: left;
 }
 
-th {
+.client-table th {
     background-color: #f2f2f2;
 }
 
-tr:hover {
+.client-table tbody tr:hover {
     background-color: #f5f5f5;
 }
 
-button {
+.action-buttons {
+    display: flex;
+}
+
+.action-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin-right: 5px;
+    padding: 6px;
 }
 
-button:hover {
-    color: red;
+.action-button:hover {
+    opacity: 0.7;
+}
+
+.edit {
+    color: #007bff;
+}
+
+.delete {
+    color: #dc3545;
+}
+
+.view {
+    color: #17a2b8;
 }

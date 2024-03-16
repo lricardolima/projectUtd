@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate, useParams } from 'react-router-dom';
-import { editClient, getClient } from '../../../services/client-requests.jsx';
-import '../../../style/style.css'
-import '../../../style/form.css'
+import {useEffect, useState} from 'react';
+import {useNavigate, useParams} from 'react-router-dom';
+import {editClient, getClient} from '../../../services/client-requests.jsx';
+import {FaArrowLeft, FaSave, FaUserPlus} from "react-icons/fa";
 
 function EditClient() {
-    const { id } = useParams();
+    const {id} = useParams();
     const navigate = useNavigate();
     const [client, setClient] = useState({
         name: '',
@@ -24,7 +22,7 @@ function EditClient() {
     };
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
+        const {name, value} = event.target;
         setClient((prevClient) => {
             return {
                 ...prevClient,
@@ -36,7 +34,7 @@ function EditClient() {
     const updateClient = async (event) => {
         event.preventDefault();
         await editClient(client);
-        navigate('/client/view');
+        navigate('/');
     };
 
     return (
@@ -75,12 +73,14 @@ function EditClient() {
                     />
                 </div>
                 <div className="form-group">
-                    <button className="submit" type="submit">Salvar</button>
+                    <button className="submit" type="submit">
+                        <FaSave/> Cadastrar
+                    </button>
                 </div>
                 <div className="form-group">
-                    <Link to="/client/view">
-                        <button className="cancel-button" type="button">Cancelar</button>
-                    </Link>
+                    <button className="action-button" onClick={() => navigate('/')}>
+                        <FaArrowLeft/> Cancelar
+                    </button>
                 </div>
             </form>
         </div>

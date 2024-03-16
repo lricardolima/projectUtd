@@ -6,7 +6,6 @@ import '../../style/style.css';
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <img src="../../assets/OIP.jpg" alt="Logo" className="navbar-logo" />
             <ul className="navbar-nav">
                 <li className="nav-item">
                     <NavLink to="/" exact activeClassName="active">
@@ -18,12 +17,6 @@ const Navbar = () => {
                         Clientes
                     </NavLink>
                 </li>
-                <li className="nav-item">
-                    <NavLink to="/client/view" activeClassName="active">
-                        Listados
-                    </NavLink>
-                </li>
-                {/* Adicione mais itens de menu conforme necessário */}
             </ul>
         </nav>
     );
