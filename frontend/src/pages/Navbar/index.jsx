@@ -13,8 +13,8 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/client" activeClassName="active">
-                        Clientes
+                    <NavLink to="/cart-check" activeClassName="active">
+                        cart-checkes
                     </NavLink>
                 </li>
             </ul>

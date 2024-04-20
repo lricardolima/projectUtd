@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Clients/Home';
-import Client from './pages/Clients/Client';
-import AddClient from './pages/Clients/AddClient';
-import EditClient from './pages/Clients/EditClient';
-import ViewClient from './pages/Clients/ViewClient';
+import Home from './pages/CartCheck/Home';
+import CartChecks from './pages/CartCheck/CartChecks';
+import AddCartCheck from './pages/CartCheck/AddCartCheck';
+import EditCartCheck from './pages/CartCheck/EditCartCheck';
+import ViewCartCheck from './pages/CartCheck/ViewCartCheck';
 import NoMatch from './pages/NoMatch';
 
 function App() {
@@ -11,10 +11,10 @@ function App() {
         <>
             <Routes>
                 <Route index element={<Home />} />
-                <Route path='client' element={<Client />}>
-                    <Route index element={<AddClient />} />
-                    <Route path='edit/:id' element={<EditClient />} />
-                    <Route path='view/:id' element={<ViewClient />} />
+                <Route path='cart-check' element={<CartChecks />}>
+                    <Route index element={<AddCartCheck />} />
+                    <Route path='edit/:id' element={<EditCartCheck />} />
+                    <Route path='view/:id' element={<ViewCartCheck />} />
                 </Route>
                 <Route path='*' element={<NoMatch />} />
             </Routes>

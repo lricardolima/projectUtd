@@ -1,68 +1,95 @@
+/* Estilizando o container do formulário */
+form fieldset legend {
+    font-size: 1.5em; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: gold; /* Cor do texto */
+    margin-bottom: 10px; /* Margem inferior para separação */
+}
 .form-container {
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+/* Estilizando o fieldset */
+form fieldset {
+    border: 2px solid gold; /* Definindo a cor da borda */
+    padding: 10px; /* Adicionando espaço interno */
+    border-radius: 5px; /* Arredondando as bordas */
 }
 
+/* Adicionando estilos para cada grupo */
+.form-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: calc(20% - 20px); /* Ajustando a largura para 20% com margem direita */
+    margin-right: 20px; /* Adicionando margem direita para espaçamento entre os grupos */
+    display: inline-block;
+    flex-direction: column;
+}
+
+/* Estilizando as labels */
 .form-group label {
-    font-size: large;
-    display: block;
-    margin-left: 10px;
+    font-size: medium;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
+/* Estilizando os campos de entrada */
 .form-group input[type="text"],
-.form-group input[type="email"]
-{
-    width: 100%;
-    padding: 15px;
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+    width: calc(100% - 16px); /* Ajustando a largura para ocupar o espaço disponível */
+    padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 50px;
+    border-radius: 10px;
+    margin-top: 5px; /* Adicionando margem superior */
+    transition: border-color 0.3s; /* Adicionando uma transição suave para a cor da borda */
 }
 
-.form-container {
-    position: relative;
+.form-group select {
+    width: 100%; /* Ajustando a largura para ocupar o espaço disponível */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 5px; /* Adicionando margem superior */
+    transition: border-color 0.3s; /* Adicionando uma transição suave para a cor da borda */
 }
 
-.action-button {
-    float: right;
+/* Estilizando os campos de entrada quando em foco */
+.form-group input:focus {
+    border-color: #007bff; /* Alterando a cor da borda quando em foco */
 }
 
-.form-group .action-button {
-    padding: 20px 20px;
+/* Estilizando os botões */
+.action-button,
+.submit {
+    width: 100%;
+    padding: 8px;
     background-color: #6c757d;
     color: #fff;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
-    margin-right: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s; /* Adicionando uma transição suave para a cor de fundo */
 }
 
-.form-group .action-button:hover {
+/* Estilizando os botões quando em hover */
+.action-button:hover,
+.submit:hover {
     background-color: #e21111;
 }
 
+/* Estilizando o botão de envio */
 .submit {
-    float: left;
-}
-
-.form-group .submit {
-    padding: 20px 20px;
     background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-left: 20px;
 }
 
-.form-group .submit:hover {
+/* Estilizando o botão de envio quando em hover */
+.submit:hover {
     background-color: #0056b3;
 }

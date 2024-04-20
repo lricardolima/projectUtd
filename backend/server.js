@@ -3,9 +3,9 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const app = express()
-const db = require('./app/config/db.config')
-const Client = db.Client
-const router = require('./app/routes/routes')
+const db = require('./config/db.config')
+const CartCheck = db.CartCheck
+const cartCheckRouter = require('./app/cartCheck/routes/cartCheck.routes')
 
 // Reconfigures CORS
 const corsOptions = {
@@ -21,7 +21,7 @@ app.use(bodyParser.json())
 app.use(express.static('resource'))
 
 // Configuração das rotas
-app.use('/', router)
+app.use('/', cartCheckRouter)
 
 // Inicialização do servidor
 const server = app.listen(8080, function () {
@@ -31,20 +31,37 @@ const server = app.listen(8080, function () {
 })
 
 // Sincronização do modelo e criação de dados iniciais
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: true }).then(async () => {
     console.log('Delete and recreate the table using { force: true }')
-    Client.sync().then(() => {
-        const clients = [
-            { name: 'Luis Ricardo', age: 38, email: 'luislima@email.com' },
-            { name: 'Ruth Rodrigues', age: 35, email: 'ruthrod@email.com' },
-            { name: 'Lizandra Sampaio', age: 15, email: 'lizandra@email.com' }
-        ]
-        clients.forEach(client => {
-            Client.create(client).then(() => {
-                console.log('Client created:', client.name)
-            }).catch(err => {
-                console.error('Error creating client:', err)
-            })
-        })
-    })
+    try {
+        await CartCheck.bulkCreate([
+            {
+                name: 'Meluiz',
+                establishment: 'ENEL',
+                card: 'Mastercard',
+                purchaseDate: new Date(),
+                installmentNumber: '1',
+                installmentQuantity: '10',
+                installmentValue: '100',
+                amountDue: '1000',
+                totalDue: '1000',
+                lastInstallmentDate: new Date(),
+            },
+            {
+                name: 'Caixa',
+                establishment: 'CAGECE',
+                card: 'Visa',
+                purchaseDate: new Date(),
+                installmentNumber: '1',
+                installmentQuantity: '10',
+                installmentValue: '100',
+                amountDue: '1000',
+                totalDue: '1000',
+                lastInstallmentDate: new Date(),
+            }
+        ]);
+
+    } catch (err) {
+        console.error('Error creating records:', err);
+    }
 })

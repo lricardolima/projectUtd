@@ -1,0 +1,57 @@
+.view-cart-check-container {
+    display: flex;
+    flex-direction: column; /* Ajusta o layout para coluna */
+    align-items: center; /* Centraliza os elementos na vertical */
+    margin-top: 50px;
+}
+
+.back-button {
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do botão */
+    margin-left: 15rem;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+
+}
+
+.cart-check-info {
+    width: 100%; /* Garante que o fieldset ocupe toda a largura */
+    max-width: 600px; /* Define uma largura máxima para o fieldset */
+    border: 3px solid gold; /* Adiciona uma borda sólida com cor cinza */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    padding: 20px; /* Adiciona preenchimento interno */
+}
+
+.cart-check-info__title {
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
+    font-size: 25px; /* Define o tamanho do título */
+}
+
+.cart-check-info__field {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.cart-check-info__field-label {
+    width: 150px; /* Largura fixa para as etiquetas */
+    font-size: medium;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.cart-check-info__field-value {
+    margin-right: 15px;
+}
+
+.back-link {
+    text-decoration: none; /* Remove sublinhado do link */
+    color: #007bff; /* Cor do link */
+    display: inline-flex; /* Permite alinhar o ícone e o texto lado a lado */
+    align-items: center; /* Alinha verticalmente o ícone e o texto */
+}
+
+.back-link:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o link */
+}
+
+.back-icon {
+    margin-right: 5px; /* Adiciona espaçamento entre o ícone e o texto */
+}
